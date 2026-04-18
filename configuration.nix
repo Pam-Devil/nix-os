@@ -82,17 +82,17 @@
 
   services.getty.autologinUser = "pamdevilcs";
   
-  programs.hyprland = {
-	enable = true;
-	xwayland.enable = true;
-  };
+#  programs.hyprland = {
+#	enable = true;
+#	xwayland.enable = true;
+#  };
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pamdevilcs = {
     isNormalUser = true;
     description = "pamdevilcs";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
     	tree
     ];
